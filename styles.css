@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.welcome {
+  display: inline-block;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  background: black;
+  color: white;
+  height: auto;
+  font-size: 4rem;
+  border-radius: 0.4rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.grid-container {
+  display: grid;
+  width: 30rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 5rem;
+  margin: 1rem;
+  grid-gap: 1rem;
+}
+
+.box {
+  transition: 500ms ease-in;
+}
+
+.input {
+  width: 84%;
+  height: 87%;
+  font-size: 4rem;
+  text-align: center;
+  transition: transform 500ms;
+}
+.input:focus {
+  outline: 0.12rem solid black;
+}
+
+.animation-shake {
+  animation: shake 350ms ease-in-out;
+}
+
+.animation-flip {
+  transform: rotateX(90deg);
+}
+@keyframes shake {
+  10% {
+    transform: translateX(-5%);
+  }
+  30% {
+    transform: translateX(5%);
+  }
+  50% {
+    transform: translateX(-7.5%);
+  }
+  70% {
+    transform: translateX(7.5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animation-dance {
+  animation: dance 500ms ease-in-out;
+}
+
+@keyframes dance {
+  20% {
+    transform: translateY(-50%);
+  }
+  40% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-25%);
+  }
+  80% {
+    transform: translateY(2.5%);
+  }
+  90% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.baG-container {
+  display: flex;
+  position: relative;
+  left: 4rem;
+}
+.btn-grid-container {
+  display: grid;
+  width: 6rem;
+  grid-template-rows: repeat(6, 1fr);
+  margin: 1rem;
+  grid-gap: 1rem;
+}
+
+.btn-no-hover {
+  height: 0;
+  border: none;
+  color: white;
+}
+
+.btn-hover {
+  background-color: rgb(33, 129, 167);
+  color: white;
+  border: 0.2rem solid black;
+  height: 2rem;
+  margin-top: 1.4rem;
+  border-radius: 0.4rem;
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0 0.1rem rgba(20, 20, 20, 0.966);
+}
+
+.btn-hover:active {
+  box-shadow: 0 5px rgba(20, 20, 20, 0.2);
+  transform: translateY(2px);
+}
+
+.btn-hover:hover {
+  cursor: pointer;
+  background-color: rgb(4, 0, 211);
+}
+#check {
+  position: absolute;
+}
+
+#gear {
+  fill: white;
+  width: 2rem;
+  height: auto;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+#gear:hover {
+  fill: gray;
+  transform: rotate(359deg);
+}
+
+input[type="checkbox"].toggle {
+  opacity: 0;
+}
+
+input[type="checkbox"].toggle + label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].toggle:checked + label::after {
+  background-color: rgb(9, 187, 9);
+  transform: translateX(2.1rem);
+}
+input[type="checkbox"].toggle:checked + label::before {
+  background-color: rgb(155, 231, 155);
+}
+input[type="checkbox"].toggle + label::before {
+  content: "";
+  width: 4rem;
+  height: 2rem;
+  background-color: rgba(245, 129, 129, 0.774);
+  border-radius: 10px;
+  border: 0.1rem solid black;
+  cursor: pointer;
+}
+input[type="checkbox"].toggle + label::after {
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+
+  cursor: pointer;
+  transition: 350ms ease-in-out;
+  margin-left: 0.3rem;
+}
+
+.span-label {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+.explain {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.checkbox-container {
+  z-index: -19;
+  opacity: 0;
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid black;
+  margin: 0;
+  background-color: white;
+  position: relative;
+  padding: 1rem;
+  padding-top: 0;
+  min-width: 20rem;
+}
+.checkbox-inner-container {
+  position: relative;
+}
+.test {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.x {
+  position: absolute;
+  margin: 0;
+  border: 0.1rem solid black;
+  right: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  top: -0.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.x:hover {
+  background-color: black;
+  color: white;
+}
+.width-container {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  opacity: 100%;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: black;
+  z-index: -20;
+  opacity: 0;
+}
+body {
+  position: relative;
+}
+.top-container {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+
+.no-word {
+  position: absolute;
+  width: 20rem;
+  background-color: rgb(201, 201, 201);
+  z-index: 40;
+  border-radius: 3px;
+  top: 0rem;
+  transition: 300ms ease-in;
+  border: 0rem solid white;
+  outline: 0rem solid rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.no-word-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard {
+  align-self: center;
+  margin-bottom: 5px;
+  max-width: 500px;
+  width: 100%;
+}
+.keyboard-row {
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.75rem;
+  margin: 0 auto 2px;
+  touch-action: manipulation;
+  width: 98%;
+}
+.keyboard-key {
+  align-items: center;
+  background-color: #ebebeb;
+  border: 0.1rem solid white;
+  border-radius: 4px;
+  color: black;
+  display: flex;
+  flex: 1 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  justify-content: center;
+  padding: 8px 6px;
+  width: 100%;
+}
+.keyboard-key:hover {
+  cursor: pointer;
+}
+.keyboard-key:active {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.1rem rgba(20, 20, 20, 0.966);
+}
+
+#myChartContainer {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+}
+
+.statistik {
+  display: flex;
+  width: 40rem;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.statistik div {
+  border-right: 0.1rem solid black;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: "Open Sans";
+}
+#längsta {
+  border-right: none;
+}
+
+.end-container {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  height: 0rem;
+  transition: 600ms ease-in;
+  z-index: 40;
+  overflow: hidden;
+}
+.sub-end-container {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border: 0.1rem solid black;
+  height: 0rem;
+  border-radius: 6px;
+  box-shadow: rgba(55, 55, 55, 0.486) 0px 0px 9px;
+  background: white;
+  transition: 600ms ease-in;
+}
+
+.stat-header {
+  font-family: "Open Sans";
+  font-size: 2.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+  font-weight: 700;
+}
+
+.ordetVar {
+  font-size: 1.7rem;
+}
+em {
+  font-weight: 700;
+}
+
+a {
+  color: black;
+}
+
+a::after {
+  content: " \f35d";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.word-number-div{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button{
+  cursor: pointer;
+}
+#word-number-label{
+  display: block;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+#word-number-input{
+  padding: 5px;
+}
+#word-number-button{
+  padding: 5px 10px;
+}
